@@ -1,0 +1,17 @@
+CREATE DATABASE supermercado;
+USE supermercado;
+
+CREATE TABLE productos (
+    codBarras VARCHAR(20),
+    nombre VARCHAR(400) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    primary key (codBarras)
+);
+
+CREATE TABLE clientes (
+    dni CHAR(9)UNIQUE not null,
+    nombre VARCHAR(200) NOT NULL,
+    apellidos VARCHAR(300) NOT NULL,
+    numTarjeta VARCHAR(20) NOT NULL,
+    primary key(dni)
+);
